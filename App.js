@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { AppLoading } from 'expo';
 
 export default function App() {
+  const [ready, setReady] = useState(false);
+
+  const startAsync = function() {
+    return true;
+  }
+
+  if (!ready) {
+    return (
+      <AppLoading
+        startAsync={startAsync}
+        onFinish={() => setReady(true)}
+      />
+    )
+  }
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Hello</Text>
     </View>
   );
 }
