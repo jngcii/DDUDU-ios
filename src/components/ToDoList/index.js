@@ -3,12 +3,12 @@ import { View, Text, StyleSheet, Dimensions } from 'react-native';
 
 const { width: fullWidth } = Dimensions.get('screen');
 
-export default function({ item }) {
+export default function({ item, index }) {
   return (
     <View style={styles.wrapper}>
       <View style={styles.container}>
-        <Text>{item.id}</Text>
-        <Text>{item.date}</Text>
+        <Text>{index}</Text>
+        <Text style={styles.text}>{item.date}</Text>
       </View>
     </View>
   );
@@ -17,7 +17,7 @@ export default function({ item }) {
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
-    width: fullWidth,
+    width: '100%',
     height: '100%',
     padding: 15,
   },
@@ -34,5 +34,10 @@ const styles = StyleSheet.create({
     },
     shadowRadius: 5,
     shadowOpacity: 0.1,
+  },
+  text: {
+    fontSize: 20,
+    fontWeight: '600',
+    color: '#333',
   }
 });
