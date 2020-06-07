@@ -12,7 +12,7 @@ const DATA = [
 
 export default function() {
   return (
-    <ScrollView horizontal={true} pagingEnabled={true} style={styles.wrapper}>
+    <ScrollView horizontal pagingEnabled showsHorizontalScrollIndicator={false} initialPage={2} style={styles.wrapper}>
       {DATA.map(item => <ToDoList key={item.id} item={item} />)}
     </ScrollView>
   );

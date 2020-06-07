@@ -1,12 +1,10 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, Text, View, Button } from 'react-native';
+import { SafeAreaView, StyleSheet, View, Button } from 'react-native';
 import ListContainer from '../../components/ListContainer';
 
 export default function ({ navigation }) {
   return (
     <SafeAreaView style={styles.wrapper}>
-      <Text>To Do Lists</Text>
-
       <ListContainer />
 
       <View style={styles.navBar}>
@@ -26,9 +24,9 @@ export default function ({ navigation }) {
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#dcdde1',
   },
 
   navBar: {
